@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed Page</title>
+ <meta name="viewport" content="width=device-width">
+ 
+ <style>
+  	/* styles.css */
+	body {
+	  font-family: Arial, sans-serif;
+	  background-color: violet;
+	  margin: 0;
+	  padding: 0;
+	}
+
+	img {
+	    max-width: 100%;
+	}
+
+	.tab-container {
+	  max-width: 1000px ;
+	  margin: 20px auto;
+	  border: 1px solid #ccc;
+	}
+
+	.tab-menu {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  background-color: #f1f1f1;
+	  border-bottom: 1px solid #ccc;
+	}
+
+	.tab-menu li {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  cursor: pointer;
+	}
+
+	.tab-menu li.active {
+	  background-color: #ccc;
+	}
+
+	.tab-content {
+	  padding: 20px;
+	}
+
+	.tab-pane {
+	  display: none;
+	}
+
+	.tab-pane.active {
+	  display: block;
+	}
+
+	footer {
+  	    padding: 20px;
+   	   text-align: center;
+               }
+
+  </style>
+ 
+</head>
+<body>
+  <div class="tab-container">
+    <ul class="tab-menu">
+      <li class="active" onclick="changeTab(0)">Home</li>
+      <li onclick="changeTab(1)">Services</li>
+      <li onclick="changeTab(2)">Book Appoibntment</li> 	
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active">
+        <h2>Home Content</h2>
+        <p>
+	<img src="image.jpg" alt="Contact card">
+       .</p>
+      </div>
+
+      <div class="tab-pane">
+        <h2>Tab 2 Content</h2>
+        <p> </p>
+      </div>
+
+      <div class="tab-pane">
+        <h2>Tab 3 Content</h2>
+       <p>
+	When booking an appointment please add :
+	<ul>
+ 	 <li>Name</li>
+ 	 <li>Email</li>
+  	<li>Phone Number</li>
+	<li> Service you want provided</li>	
+	<li>A time period that would be preferable. Example: 6-8pm</li>	 
+	</ul>
+
+	<font size="+3">
+		<a href="contact.html">Book an appointent</a>
+	</font>
+       </p> 
+        </div>
+      </div>
+    </div>
+  <script  >
+   // script.js
+   function changeTab(tabIndex) {
+     var tabPanes = document.querySelectorAll('.tab-pane');
+     var tabMenuItems = document.querySelectorAll('.tab-menu li');
+
+     // Hide all tab panes
+     tabPanes.forEach(function(tabPane) {
+       tabPane.classList.remove('active');
+     });
+
+     // Remove 'active' class from all tab menu items
+     tabMenuItems.forEach(function(menuItem) {
+       menuItem.classList.remove('active');
+    });
+
+     // Show the selected tab pane
+     tabPanes[tabIndex].classList.add('active');
+
+     // Add 'active' class to the selected tab menu item
+     tabMenuItems[tabIndex].classList.add('active');
+   }
+
+  </script>
+
+
+  <footer>
+    <p>&copy; 2023 Beauty is our business You're our canvas. All rights reserved.</p>
+  </footer>
+
+ </body>
+</html>
