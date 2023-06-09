@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ernie Beauty Salon</title>
+  <title>Tabbed Page</title>
  <meta name="viewport" content="width=device-width">
  
  <style>
   	/* styles.css */
 	body {
 	  font-family: Arial, sans-serif;
-	  background-color: pink;
+	  background-color: peachpuff;
 	  margin: 0;
 	  padding: 0;
 	}
@@ -57,8 +57,33 @@
   	    padding: 20px;
    	   text-align: center;
                }
+	
+	
+	.collapsible {
+  	background-color: #777;
+  	color: white;
+  	cursor: pointer;
+  	padding: 18px;
+  	width: 100%;
+  	border: none;
+  	text-align: left;
+  	outline: none;
+  	font-size: 15px;
+	}
 
-  </style>
+	.active, .collapsible:hover {
+	  background-color;
+	}
+
+	.content {
+	  padding: 0 18px;
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.2s ease-out;
+	  background-color: #f1f1f1;
+	}
+	  
+ </style>
  
 </head>
 <body>
@@ -70,22 +95,245 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active">
-        <h2>Home</h2>
+        <h2>Home  </h2>
         <p>
 	<img src="image.jpg" alt="Contact card">
        .</p>
       </div>
 
       <div class="tab-pane">
-        <h2> Content</h2>
+        <h2>List of Provided Services in 2023</h2>
         <p> </p>
+	<button class="collapsible">Relaxed Hair</button>
+	<div class="content">
+	  <p> 
+		<ul><br>
+ 	 	<li>Wrap ,set, And  style /short hair only starting at………….$65</li><br>
+		<li>Finger wave set starting at…………..$55</li><br>
+		<li>Roller set and style Starting at …….$75</li><br>
+		<li>Add-on chemical reconstruction conditioning treatment Starting at …………..$20 </li><br>
+		<li>Texturizer on short hair starting at……………… $65</li><br>
+		<li>Relaxer touch up and style( short hair) ……….$75  (long hair)...$85</li><br>
+		<li>Virgin relaxer and style……( short hair ) $95 ……..(long hair) $95 - 125</li><br>
+		<li>Keratin smoothing(anti frizz) treatment ………$25</li><br>
+		<li> silk press………….(short hair) $75…..(long hair) +$20</li><br>
+		<li>Wash & GO-Cleanse,moisturize and define……….$50</li>	<br>
+		<li>Comb coils (short hair) to the ears ……….$60……….. +$75( long hair)</li><br>
+		<li>Natural Hair Rod . . . . . .$60(short hair)………… +$20 (for long Hair)</li><br>
+		<li>2 Strand twist. . . . . . . $75 (shortHair). . . . . . + $20(Long Hair )</li><br>	
+		<li>Flat Twist w/Cleanse moisturize and style $75(short hair) …… +$20 ( long hair)</li><br>
+		<li>Basic twisted updo style with no hair added start at ………….$80</li><br>
+		<li>Natural hair flexi rod set………$85 (Short hair)………..$20 for( Long hair)</li><br>	
+		<li> anti frizz smoothing for the step system above shoulders………… </li><br>
+		</ul>
+
+	</p>
+	</div>
+
+	<button class="collapsible">Hair Scalp Treatment</button>
+	<div class="content">
+	  <p>
+		<ul><br>
+
+		<li>017-Deep Conditioning 9 (Add on to a regular…………$20</li>	<br>
+		<li>Protein or Reconstructive Treatment (Add on to a regular service).............$20</li><br>
+		<li>020-Dry and Flaky scalp Treatment……...$ 20</li><br>
+		<li>018-Hydration Steam Treatment (Add to a regular service only)</li><br>	
+		<li>Detangle Fee..............$ 20</li><br>
+		<li>022-Natural Braid= Take down…………………$20-50</li><br>
+		<li>023-Basic Braid………….......$ 25</li>	<br>
+		<li>024-Shampoo Condition & Blow Dry………….$ 45...& Braid Down $ 75</li> <br>
+	 </p>
+	</div>
+
+	<button class="collapsible">Damage Repair Treatment</button>
+	<div class="content">
+	  <p> <ul>
+		<br><li>025-Olaplex Treatment……...$30</li>	<br> 
+	 </p>
+	</div>
+
+	<button class="collapsible">Healthy Hair Trim's and Cut Add only</button>
+	<div class="content">
+	  <p><ul><br>
+
+
+		<li>026-Healthy Hair Trim w service Add on……………..$15</li>	<br>
+		<li> 027-Women's HairCut Light Layers…………..$ 25</li><br>
+		<li>028-Women's HairCut ---Reshape to a Style……………....$40</li><br>
+		<li>029-Women's HairCut-Blunt/Swing Bob………..$ 40</li>	<br>
+		<li> 030-Women's HairCut-Stacked Bob w/Layers (Natural Hair or Extension………….$40</li>  <br>
+	 </p>
+	</div>
+
+	<button class="collapsible">Hair color services(starting services)</button>
+	<div class="content">
+	  <p> <ul><br>
+
+		<li>031-Hair Color Consultation (required w A scheduled Color Service………….$ 15</li><br>
+		<li>032-Add on (1 oz) of Additional Mixture……….$20</li><br>
+		<li>033-HighGloss Shine-Treatment(3oz)............$ 25</li><br>
+		<li>034-Edges Only-with Grey Coverage Treatment………..$25 </li><br>
+		<li>035-Rinse /Root Retouch-Semi PermanentColor (3oz)................$35</li><br>
+		<li>Color Refresh/Short Hair -Single process (40Z)or One Extension. . . . . . . . . $ 55</li><br>
+		<li>Colo refresh/ Shoulder Length Hair Covers 1 color Other or 2 extensions Items ( single Process). .... . . . . . . $50</li><br>
+		<li>Full head of color or three Extensions Items( single process)...................$85</li><br>
+		<li>partial highlights or 2  extension items(Double process)...........$115 </li><br>
+		<li> full head of color three extension items (Double process)..............$125</li><br> 
+	</p>
+	</div>
+
+	<button class="collapsible">crochet and ponytail style (deposit may be required when booking)</button>
+	<div class="content">
+	  <p> <ul><br>
+ 
+		<li>Sleep ponytail W install and style………….$100-$150</li><br>
+		<li>Pre-Looped Crochet Hair w/Install & Style..................$125</li><br>
+		<li>Loose Bulk-Crochet Hair Install & Style w Freetress Hair.... $125</li><br>
+		<li>Individually wrapped Crochet Style (deposit may be required) for Shoulder Length.... $200 and 250 for Long Length</li><br> 
+	 </p>
+	</div>
+
+	<button class="collapsible">Loc's services (Deposit May be squired) Starting at</button>
+	<div class="content">
+	  <p> <ul><br> 
+		<li>045-Sisterlocks-Retightening..........................Standard Shoulder Length . Add.............for Longer Length..</li><br>
+		<li>Locs Full Head of Color........... $ 150</li><br>
+		<li>Starter Locs Consultation( 15 mins)................$ 15</li><br>
+		<li>Loc Scalp Treatment……………$ 25</li><br>
+		<li>Locs Color on Tips (per Loc (5 loc minimum)................$ 25</li><br>
+		<li>050-Loc-Detox comb w Retwist. . . . . . . . . . . $140</li><br>
+		<li>051-Loc Style and Go...................$25</li><br>
+		<li>052-Loc Detox Treatment...................$50</li><br>
+		<li>053-Starter Loc's (Short Hair Above the Ear)... . . . . . . . ..$ 75</li><br>
+		<li>054-Loc Retwist (Starting at the Shoulders..............$85-125</li><br>
+		<li>055-Loc Repair Service (5$ per .....................</li><br>
+		<li>056-Comb Coil Loc Twist & Style. . . . . . . .$ 125</li><br>
+		<li>057-Loc Reconstruction /Repair Full Head........$ 175.</li><br>
+		<li>058-Faux Locs -Individually wrapped 6-8 hres services............  $175-400</li><br>
+		<li>059-Loc Extension Consultation Required………………..$400-950</li><br>
+		<li>059 A-Loc Hot Oil Treatment...........$ 20</li><br>
+		<li>invisible loc …………..$125</li><br>
+	</p>
+	</div>
+
+	<button class="collapsible">Basic braids & Kids style-starting (N0 hair added)</button>
+	<div class="content">
+	  <p> <ul><br> 
+
+		 <li> Men's full head CornrowStyles .. . . . . . . .$75</li><br>
+		<li>Men's braided bun Style/ crown braids style.  . . . . . .(top only)$45-$55</li><br>
+		<li>Little kids basic braid style to the shoulders (no hair added) valued for ages 3-8 only……….$65</li><br>
+		<li>Kids basic feedends with here added (value for ages 3-7)...............$75</li><br>
+		<li>Basic cornrows W styles ……………$65</li><br>
+		<li>Kids knotless braids large size…………$100 - Medium 150 /small 180</li><br>
+		<li>Add-on design to braid style (Triangles, hearts, etc)............$20</li><br> 
+	</p>
+	</div>
+
+	<button class="collapsible">Braid styles W/ hair added-Here is not provided.Check with the
+			 stylist and buy the right hair for your style.(Deposit may
+		       be required for certain styles).Shampoo and blow dry are included.</button>
+	<div class="content">
+	  <p> <ul><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+	 </p>
+	</div>
+
+	<button class="collapsible">sew-in style (starting price deposit may be required)</button>
+	<div class="content">
+	  <p><ul><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+	 </p>
+	</div>
+
+	<button class="collapsible">Sew in weave Maintenance services</button>
+	<div class="content">
+	  <p> <ul><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+	</p>
+	</div>
+
+	<button class="collapsible">Wig Service</button>
+	<div class="content">
+	  <p>  <ul><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+		<li></li><br>
+	</p>
+	</div>
       </div>
 
       <div class="tab-pane">
-        <h2>Bookings</h2>
-       <p>
+        
+	<h2>Schedule </h2>
+	<p style="margin-left: 25px;"> <strong> 
+		Tuesday - Thursday <br>
+		 <mark>9 a.m.- 4 p.m. </mark><br><br>
+ 		Friday<br>
+		 <mark>9 a.m. - 3 p.m.</mark><br><br>
+		Saturday <br>
+		 <mark>9 a.m.- 5 p.m.</mark><br>	 
+	</strong></p>
+	
+         <h2>Policy  </h2>
+
+	<p style="margin-left: 25px;">
+	
+	     <b> Before booking please remenber these strictly enforced policies. </b>
+		<ul style="margin-left: 25px;">
+		<li><b> <mark>NO CASH</mark></b> - Card and online transfer (zelle) acceptable.  </li> <br>
+		<li><b> <mark>QUALITY CHECK</mark></b> - Check evrything is in order before leaving the salon because refunds will not be provided.</li> <br>
+		<li><b> <mark>BRING YOUR OWN HAIR</mark></b> - Hair will not be provided by the salon no matter the service no matter the price. </li><br>
+		<li><b> <mark>BRAIDS,COLORS, AND RELAXERS REQUIRE CONSULTATIONS </mark></b> - A consultation appointment must be set up before coming for the service</li><br>
+		<li><b> <mark>MINIMUM 2-HOUR CANCELLATION</mark></b> - All cancellation must be made two hours prior. </li><br>
+		 </ul>
+	
+
+	</p>
+
+	<h2>  Appointments</h2>
+       <p style="margin-left: 25px;">
 	When booking an appointment please add :
-	<ul>
+	<ul  style="margin-left: 25px;">
  	 <li>Name</li>
  	 <li>Email</li>
   	<li>Phone Number</li>
@@ -94,7 +342,7 @@
 	</ul>
 
 	<font size="+3">
-		<a href="contact.html">Book an appointent</a>
+		<center><a href="contact.html">Book an appointent</a></center>
 	</font>
        </p> 
         </div>
@@ -123,6 +371,20 @@
      tabMenuItems[tabIndex].classList.add('active');
    }
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
   </script>
 
 
