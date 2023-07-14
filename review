@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review Page</title>
+  <style>
+    .rating-container {
+      margin-bottom: 20px;
+    }
+
+    .rating-question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      display: inline-block;
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .filled-star {
+      color: #ffcc00;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      resize: vertical;
+    }
+
+    #submit-btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Review Page</h1>
+  <p>We value your feedback! Please take a moment to rate your experience with our website and provide additional comments.</p>
+
+  <div class="rating-container">
+    <p class="rating-question">How would you rate your overall experience?</p>
+    <div class="stars" data-question="experience">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">Did you find the website user-friendly?</p>
+    <div class="stars" data-question="user-friendly">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">How would you rate the website's design and aesthetics?</p>
+    <div class="stars" data-question="design">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">Were you able to find the information you were looking for?</p>
+    <div class="stars" data-question="information">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">Did the website load quickly and perform well?</p>
+    <div class="stars" data-question="performance">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">How likely are you to recommend our website to others?</p>
+    <div class="stars" data-question="recommendation">
+      <span class="star" data-value="1">&#9734;</span>
+      <span class="star" data-value="2">&#9734;</span>
+      <span class="star" data-value="3">&#9734;</span>
+      <span class="star" data-value="4">&#9734;</span>
+      <span class="star" data-value="5">&#9734;</span>
+    </div>
+  </div>
+
+  <div class="rating-container">
+    <p class="rating-question">Any additional comments or suggestions?</p>
+    <textarea id="comments"></textarea>
+  </div>
+
+  <button id="submit-btn">Submit</button>
+
+  <script>
+    const stars = document.querySelectorAll('.stars .star');
+
+    function handleStarClick() {
+      const clickedStar = this;
+      const question = clickedStar.parentNode.dataset.question;
+      const starValue = clickedStar.dataset.value;
+
+      // Remove the filled-star class from all stars of the same question
+      const starsOfQuestion = document.querySelectorAll(`.stars[data-question="${question}"] .star`);
+      starsOfQuestion.forEach(star => star.classList.remove('filled-star'));
+
+      // Add the filled-star class to the clicked star and previous stars
+      starsOfQuestion.forEach(star => {
+        if (star.dataset.value <= starValue) {
+          star.classList.add('filled-star');
+        }
+      });
+    }
+
+    // Add event listeners to each star
+    stars.forEach(star => star.addEventListener('click', handleStarClick));
+  </script>
+</body>
+</html>
