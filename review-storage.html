@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review Storage</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Review Storage</h1>
+  <table id="reviews-table">
+    <tr>
+      <th>Overall Experience</th>
+      <th>User-Friendly</th>
+      <th>Design and Aesthetics</th>
+      <th>Information</th>
+      <th>Performance</th>
+      <th>Recommendation</th>
+      <th>Comments</th>
+    </tr>
+  </table>
+
+  <script>
+    function displayReview(review) {
+      const table = document.getElementById('reviews-table');
+
+      const row = document.createElement('tr');
+      for (const key in review) {
+        const cell = document.createElement('td');
+        cell.textContent = review[key];
+        row.appendChild(cell);
+      }
+
+      table.appendChild(row);
+    }
+
+    // Retrieve reviews from local storage
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+    // Display stored reviews
+    reviews.forEach(review => displayReview(review));
+  </script>
+</body>
+</html>
